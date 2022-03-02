@@ -18,7 +18,6 @@ env:
                                                # containerDefinitions section of your task definition
 jobs:
   deploy:
-    needs: build
     name: Deploy
     runs-on: ubuntu-latest
     environment: production
