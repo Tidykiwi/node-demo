@@ -9,15 +9,12 @@
           "logDriver": "awslogs",
           "secretOptions": null,
           "options": {
-            "awslogs-group": "/ecs/first-run-task-definition",
+            "awslogs-group": "/ecs/task-definition",
             "awslogs-region": "ap-southeast-2",
             "awslogs-stream-prefix": "ecs"
           }
         },
-        "entryPoint": [
-          "sh",
-          "-c"
-        ],
+        "entryPoint": [],
         "portMappings": [
           {
             "hostPort": 80,
@@ -25,9 +22,7 @@
             "containerPort": 80
           }
         ],
-        "command": [
-          "/bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>You got something into a container</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\""
-        ],
+        "command": [],
         "linuxParameters": null,
         "cpu": 256,
         "environment": [],
@@ -42,7 +37,7 @@
         "memoryReservation": 512,
         "volumesFrom": [],
         "stopTimeout": null,
-        "image": "049372909399.dkr.ecr.ap-southeast-2.amazonaws.com/react-task-tracker:372a85bb1398c82678bd3f870c9e8a6e64a46a2d",
+        "image": "node:latest",
         "startTimeout": null,
         "firelensConfiguration": null,
         "dependsOn": null,
@@ -59,7 +54,7 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "custom"
+        "name": "node"
       }
     ],
     "placementConstraints": [],
@@ -69,7 +64,8 @@
       "EC2",
       "FARGATE"
     ],
-    "family": "first-run-task-definition",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:049372909399:task-definition/task-definition:5",
+    "family": "task-definition",
     "requiresAttributes": [
       {
         "targetId": null,
@@ -87,12 +83,6 @@
         "targetId": null,
         "targetType": null,
         "value": null,
-        "name": "com.amazonaws.ecs.capability.ecr-auth"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
         "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
       },
       {
@@ -100,12 +90,6 @@
         "targetType": null,
         "value": null,
         "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-      },
-      {
-        "targetId": null,
-        "targetType": null,
-        "value": null,
-        "name": "ecs.capability.execution-role-ecr-pull"
       },
       {
         "targetId": null,
@@ -127,7 +111,7 @@
     "networkMode": "awsvpc",
     "runtimePlatform": null,
     "cpu": "256",
-    "revision": 11,
+    "revision": 5,
     "status": "ACTIVE",
     "inferenceAccelerators": null,
     "proxyConfiguration": null,
