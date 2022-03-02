@@ -42,7 +42,7 @@
         "memoryReservation": 512,
         "volumesFrom": [],
         "stopTimeout": null,
-        "image": "049372909399.dkr.ecr.ap-southeast-2.amazonaws.com/react-task-tracker:7f1c16729863c97c93ac7647e69f43239da119da",
+        "image": "049372909399.dkr.ecr.ap-southeast-2.amazonaws.com/react-task-tracker:372a85bb1398c82678bd3f870c9e8a6e64a46a2d",
         "startTimeout": null,
         "firelensConfiguration": null,
         "dependsOn": null,
@@ -59,7 +59,7 @@
         "dockerLabels": null,
         "systemControls": null,
         "privileged": null,
-        "name": "sample-app"
+        "name": "custom"
       }
     ],
     "placementConstraints": [],
@@ -69,7 +69,6 @@
       "EC2",
       "FARGATE"
     ],
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:049372909399:task-definition/first-run-task-definition:11",
     "family": "first-run-task-definition",
     "requiresAttributes": [
       {
