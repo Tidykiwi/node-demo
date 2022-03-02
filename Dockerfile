@@ -2,7 +2,7 @@
 FROM node:latest
 
 # set working direction
-WORKDIR /app
+WORKDIR /node-demo
 
 # Install application dependencies
 COPY package*.json ./
