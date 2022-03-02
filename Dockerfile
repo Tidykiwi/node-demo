@@ -1,17 +1,17 @@
 # pull the official base image
 FROM node:latest
-ENV NODE_ENV=production
 
 # set working direction
 WORKDIR /app
 
 # Install application dependencies
-COPY package.json ./
-COPY package-lock.json ./
+COPY package*.json ./
 
-RUN npm install
+RUN npm ci --only=production
 
+# Bundle app source
 COPY . .
 
+EXPOSE 8080
 # Start app
-CMD [ "node", "index" ]
+CMD [ "node", "index.js" ]
