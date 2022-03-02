@@ -18,7 +18,8 @@ env:
                                                # containerDefinitions section of your task definition
 jobs:
 
-build:
+  build:
+    name: Build
     runs-on: [ubuntu-latest]
     strategy:
       matrix:
