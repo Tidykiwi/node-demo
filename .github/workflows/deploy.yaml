@@ -9,7 +9,7 @@ on: [push]
 
 env:
   AWS_REGION: ap-southeast-2                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: react-task-tracker           # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: 049372909399.dkr.ecr.ap-southeast-2.amazonaws.com/react-task-tracker           # set this to your Amazon ECR repository name
   ECS_SERVICE: node-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: default                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: ./task-definition.json # set this to the path to your Amazon ECS task definition
